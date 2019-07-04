@@ -1,11 +1,11 @@
 const BillingCycle = require('./billingCycle')
-
+const errorHandler = require('../common/errorHandler')
 
 BillingCycle.methods(['get', 'post', 'put', 'delete'])
-
 // new: true => quando fizer update retornar o valor novo
 // runValidators: true => fazer validações no update e não somente no insert
 BillingCycle.updateOptions({ new: true, runValidators: true })
+BillingCycle.after('post', errorHandler).after('put', errorHandler)
 
 BillingCycle.route('count', (req, res, next) => {
     BillingCycle.count((error, value) => {
