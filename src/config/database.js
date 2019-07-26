@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 mongoose.Promise = global.Promise
 
-module.exports =  mongoose.connection.openUri('mongodb://root:ogfy1ixfqxz@189.43.21.147:27017/mymoney?authSource=admin')
+module.exports =  mongoose.connection.openUri('mongodb://root:ogfy1ixfqxz@10.1.208.54:27017/mymoney?authSource=admin')
 
 mongoose.Error.messages.general.required = "O atributo '{PATH}' é obrigatório."
 mongoose.Error.messages.Number.min =
