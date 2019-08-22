@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 mongoose.Promise = global.Promise
 
-module.exports =  mongoose.connection.openUri('mongodb://mymoney:x17SMyEmx@ds255857.mlab.com:55857/mymoney')
+module.exports =  mongoose.connection.openUri('mongodb://localhost:27017/mymoney')
 
 
 mongoose.Error.messages.general.required = "O atributo '{PATH}' é obrigatório."
